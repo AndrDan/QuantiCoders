@@ -1,0 +1,92 @@
+.Cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.paymethod-card .svgWrapper {
+  fill: rgb(255, 255, 255);
+  height: 30px;
+  width: 30%;
+  border: 0px;
+}
+
+.paymethod-list .active .paymethod-card {
+  background: rgb(147, 99, 151);
+}
+
+.paycard-form {
+  height: auto;
+  width: 350px;
+}
+
+.paycard-container {
+  background-color: rgb(200, 213, 229);
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  padding: 15px;
+}
+
+.paymethod-container {
+  width: 60%;
+}
+
+.paymethod-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.paymethod-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(200, 213, 229);
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  height: 90px;
+  width: 200px;
+  padding: 4px;
+  margin: 5px;
+  text-align: center;
+}
+
+.paymethod-card:hover {
+  background-color: rgb(147, 99, 151);
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+#paycard-label {
+  color: rgb(255, 255, 255);
+}
+
+.paycard-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.svgWrapper {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(200, 213, 229);
+  color: rgb(200, 213, 229);
+  border-radius: 0.5rem;
+  padding: 8px;
+}
+
+@media screen and (max-width: 1124px) {
+  .Cards {
+    flex-direction: column;
+  }
+  .paymethod-container {
+    width: 100%;
+  }
+}

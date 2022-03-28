@@ -1,0 +1,18 @@
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.open-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,76 @@
+.outlet {
+  border: 1px solid rgb(200, 213, 229);
+  border-radius: 0.5rem;
+}
+
+ul.nav-tabs {
+  width: auto;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0px;
+  border-radius: 0.5rem;
+  padding-left: 0px;
+}
+
+ul.nav-tabs li {
+  padding: 0.5rem;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  max-width: 25%;
+  width: 100%;
+}
+
+ul.nav-tabs li:hover div.help-method-container .svgWrapper {
+  background: rgb(147, 99, 151, 0.6);
+  color: rgb(0, 0, 0);
+}
+
+ul.nav-tabs li.active div.help-method-container .svgWrapper {
+  background: rgb(147, 99, 151);
+  color: rgb(0, 0, 0);
+  fill: rgb(255, 255, 255);
+}
+
+.svgWrapper {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(200, 213, 229);
+  color: rgb(200, 213, 229);
+  border-radius: 0.5rem;
+  padding: 8px;
+}
+
+.help-method-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.SecondTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1124px) {
+  .SecondTab {
+    flex-direction: column;
+  }
+
+  ul.nav-tabs {
+    flex-direction: column;
+    width: fit-content;
+    align-items: baseline;
+  }
+  ul.nav-tabs li {
+    max-width: none;
+  }
+}
