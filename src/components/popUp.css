@@ -134,6 +134,10 @@ ul.switch li.active {
   ul.switch {
     width: 40%;
   }
+  .popUp__content {
+    padding-left: 0px;
+    width: 100%;
+  }
 }
 
 input[type='number']::-webkit-outer-spin-button,

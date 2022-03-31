@@ -20,7 +20,10 @@ const PopUp = ({ active, setActive }) => {
   };
 
   return (
-    <div className={active ? 'popUp active' : 'popUp'}>
+    <div
+      className={active ? 'popUp active' : 'popUp'}
+      onClick={() => setActive(false)}
+    >
       <CloseButton onClick={() => setActive(false)} />
       <div
         className={active ? 'popUp__content active' : 'popUp__content'}

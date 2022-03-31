@@ -1,10 +1,8 @@
 import React from 'react';
 import './tabs.css';
 import { useState } from 'react';
-import FirstTab from './tabs/FirstTab';
-import SecondTab from './tabs/SecondTab';
-import ThirdTab from './tabs/ThirdTab';
-import FourthTab from './tabs/FourthTab';
+import PlaceholderTab from './tabs/PlaceholderTab';
+import MainTab from './tabs/MainTab';
 
 import { ReactComponent as ClothesIcon } from 'assets/clothes.svg';
 import { ReactComponent as HandIcon } from 'assets/hand.svg';
@@ -15,7 +13,7 @@ import TabNavItem from './TabNavItem';
 import TabContent from './TabContent';
 
 const Tabs = (register) => {
-  const [activeTab, setActiveTab] = useState('tab1');
+  const [activeTab, setActiveTab] = useState('tab2');
 
   return (
     <div className="Tabs">
@@ -56,16 +54,16 @@ const Tabs = (register) => {
 
       <div className="outlet">
         <TabContent id="tab1" activeTab={activeTab}>
-          <FirstTab />
+          <PlaceholderTab />
         </TabContent>
         <TabContent id="tab2" activeTab={activeTab}>
-          <SecondTab {...register} />
+          <MainTab {...register} />
         </TabContent>
         <TabContent id="tab3" activeTab={activeTab}>
-          <ThirdTab />
+          <PlaceholderTab />
         </TabContent>{' '}
         <TabContent id="tab4" activeTab={activeTab}>
-          <FourthTab />
+          <PlaceholderTab />
         </TabContent>
       </div>
     </div>

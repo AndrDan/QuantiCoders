@@ -1,11 +1,11 @@
 import React from 'react';
 import Cards from 'components/CardComponent/Cards';
 
-const SecondTab = (register) => {
+const MainTab = (register) => {
   return (
-    <div className="SecondTab">
+    <div className="MainTab">
       <Cards {...register} />
     </div>
   );
 };
-export default SecondTab;
+export default MainTab;

@@ -18,7 +18,8 @@
 
 .paycard-form {
   height: auto;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
 }
 
 .paycard-container {
@@ -51,6 +52,7 @@
   padding: 4px;
   margin: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .paymethod-card:hover {

@@ -3,9 +3,9 @@ import Placeholder from 'react-bootstrap/Placeholder';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const ThirdTab = () => {
+const PlaceholderTab = () => {
   return (
-    <div className="ThirdTab">
+    <div className="PlaceholderTab">
       <Row>
         <Col xs={4}>
           <Placeholder animation="glow">
@@ -44,4 +44,4 @@ const ThirdTab = () => {
     </div>
   );
 };
-export default ThirdTab;
+export default PlaceholderTab;

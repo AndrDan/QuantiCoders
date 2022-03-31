@@ -4,9 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const FifthCard = () => {
+const PlacholderCard = () => {
   return (
-    <div className="FifthCard">
+    <div className="PlacholderCard">
       <Row>
         <Form.Group className="mb-3" controlId="formGridAddress1">
           <Form.Label id="paycard-label">Номер картки</Form.Label>
@@ -38,4 +38,4 @@ const FifthCard = () => {
     </div>
   );
 };
-export default FifthCard;
+export default PlacholderCard;

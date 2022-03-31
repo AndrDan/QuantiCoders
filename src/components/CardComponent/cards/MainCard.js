@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const SecondCard = ({ register }) => {
+const MainCard = ({ register }) => {
+  const [expiryDate, setExpiryDate] = useState('');
   const handleNextInput = (e) => {
     const { value, id } = e.target;
     const currId = Number(id.split('card-')[1]);
     if (value.length === 4 && currId < 4)
       document.querySelector(`#card-${currId + 1}`).focus();
   };
+  const handleDateChange = (e) => {
+    const { value } = e.target;
+    setExpiryDate(
+      value.replace(/^\d{3}$/g, value.slice(0, 2) + '/' + value[2])
+    );
+  };
 
   return (
-    <div className="SecondCard">
+    <div className="MainCard">
       <Row>
         <Form.Group className="mb-3" controlId="formGridAddress1">
           <Form.Label id="paycard-label">Номер картки</Form.Label>
@@ -58,9 +65,11 @@ const SecondCard = ({ register }) => {
             <Form.Label id="paycard-label">Термін дії</Form.Label>
             <Form.Control
               type="text"
-              maxLength={4}
+              maxLength={5}
               {...register('expiryDate', { required: true })}
               onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onChange={handleDateChange}
+              value={expiryDate}
             />
           </Form.Group>
         </Col>{' '}
@@ -80,4 +89,4 @@ const SecondCard = ({ register }) => {
     </div>
   );
 };
-export default SecondCard;
+export default MainCard;

@@ -1,11 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import './cards.css';
-import FirstCard from './cards/FirstCard';
-import SecondCard from './cards/SecondCard';
-import ThirdCard from './cards/ThirdCard';
-import FourthCard from './cards/FourthCard';
-import FifthCard from './cards/FifthCard';
+import MainCard from './cards/MainCard';
+import PlacholderCard from './cards/PlacholderCard';
 import Form from 'react-bootstrap/Form';
 
 import { ReactComponent as PayPalIcon } from 'assets/paypal.svg';
@@ -14,7 +11,7 @@ import CardNavItem from './CardNavItem';
 import CardContent from './CardContent';
 
 const Cards = (register) => {
-  const [activeCard, setActiveCard] = useState('card1');
+  const [activeCard, setActiveCard] = useState('card2');
 
   return (
     <div className="Cards">
@@ -68,19 +65,19 @@ const Cards = (register) => {
         <Form.Label>Введіть наступні данні</Form.Label>
         <div className="paycard-container">
           <CardContent id="card1" activeCard={activeCard}>
-            <FirstCard />
+            <PlacholderCard />
           </CardContent>
           <CardContent id="card2" activeCard={activeCard}>
-            <SecondCard {...register} />
+            <MainCard {...register} />
           </CardContent>
           <CardContent id="card3" activeCard={activeCard}>
-            <ThirdCard />
+            <PlacholderCard />
           </CardContent>{' '}
           <CardContent id="card4" activeCard={activeCard}>
-            <FourthCard />
+            <PlacholderCard />
           </CardContent>
           <CardContent id="card5" activeCard={activeCard}>
-            <FifthCard />
+            <PlacholderCard />
           </CardContent>
         </div>{' '}
       </Form>
