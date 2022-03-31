@@ -17,7 +17,7 @@ const MainCard = ({ register }) => {
       value.replace(/^\d{3}$/g, value.slice(0, 2) + '/' + value[2])
     );
   };
-
+  const numberInput = (e) => !/[0-9]/.test(e.key) && e.preventDefault();
   return (
     <div className="MainCard">
       <Row>
@@ -30,7 +30,7 @@ const MainCard = ({ register }) => {
               {...register('paycardNum1', { required: true })}
               maxLength={4}
               onChange={handleNextInput}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
             />
             <Form.Control
               type="text"
@@ -38,7 +38,7 @@ const MainCard = ({ register }) => {
               {...register('paycardNum2', { required: true })}
               maxLength={4}
               onChange={handleNextInput}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
             />
             <Form.Control
               type="text"
@@ -46,7 +46,7 @@ const MainCard = ({ register }) => {
               {...register('paycardNum3', { required: true })}
               maxLength={4}
               onChange={handleNextInput}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
             />
             <Form.Control
               type="text"
@@ -54,7 +54,7 @@ const MainCard = ({ register }) => {
               {...register('paycardNum4', { required: true })}
               maxLength={4}
               onChange={handleNextInput}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
             />
           </div>
         </Form.Group>
@@ -67,7 +67,7 @@ const MainCard = ({ register }) => {
               type="text"
               maxLength={5}
               {...register('expiryDate', { required: true })}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
               onChange={handleDateChange}
               value={expiryDate}
             />
@@ -81,7 +81,7 @@ const MainCard = ({ register }) => {
               type="password"
               maxLength={3}
               {...register('cvv', { required: true })}
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
             />
           </Form.Group>
         </Col>

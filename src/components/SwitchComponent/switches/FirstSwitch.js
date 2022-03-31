@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 const FirstSwitch = ({ register }) => {
+  const numberInput = (e) => !/[0-9]/.test(e.key) && e.preventDefault();
   return (
     <div className="FirstSwitch">
       <Form className="form-container">
@@ -61,7 +62,7 @@ const FirstSwitch = ({ register }) => {
             <Form.Control
               id="form-input"
               type="text"
-              onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+              onKeyPress={numberInput}
               maxLength={15}
               {...register('phone', { required: true })}
             />
@@ -123,7 +124,7 @@ const FirstSwitch = ({ register }) => {
                 type="text"
                 maxLength={12}
                 {...register('zip', { required: true })}
-                onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()}
+                onKeyPress={numberInput}
               />
             </Form.Group>
           </Col>

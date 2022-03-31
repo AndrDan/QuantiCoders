@@ -135,8 +135,11 @@ ul.switch li.active {
     width: 40%;
   }
   .popUp__content {
-    padding-left: 0px;
+    padding-left: 15px;
     width: 100%;
+  }
+  #btn-submit {
+     width: fit-content;
   }
 }
 
